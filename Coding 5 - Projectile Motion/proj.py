@@ -6,7 +6,7 @@ ground.
 Creative Element: Instead of estimating by checking the ball's position every
 0.1 seconds, the program instead oscilates between positive and negative height
 values at increasingly smaller intervals to ensure that an answer that is
-accurate to at least 3 decimal places is found, and it is also found at optimal
+accurate to at least 3 decimal places is found, and it is also found at greater
 efficiency.
 """
 
@@ -89,7 +89,7 @@ def getInput() -> None:
         height = input("Enter the inital height of the ball: ")
     # Once validity has been confirmed, force it to float
     height = float(height)
-    
+
     velocity = input("Enter the initial velocity of the ball: ")
     # Check for input validity, and request again if not
     while not isValid(velocity):
@@ -99,10 +99,11 @@ def getInput() -> None:
     velocity = float(velocity)
 
     # Get the max height and the ground time
-    print("The maximum height of the ball is ", maxHeight(height, velocity), " feet.")
-    print("The ball will hit the ground after approximately ", \
+    print("The maximum height of the ball is ",
+          maxHeight(height, velocity), " feet.")
+    print("The ball will hit the ground after approximately ",
           timeForGround(height, velocity), " seconds.")
-    
+
 
 def isValid(inp) -> bool:
     """
@@ -121,5 +122,13 @@ def isValid(inp) -> bool:
     inp = float(inp)
     return inp > 0
 
+
 # Do some test outputs
 getInput()
+
+
+# Overall, the assignment was an interesting look at different ways of doing things.
+# I have a strong physics background, so the estimation function is a unique way
+# of doing it as compared to the mathematical solution I am more accustomed to.
+# Additionally, I am more accustomed to metric units, so reminding myself of the
+# formula in imperial units was also valuable.
