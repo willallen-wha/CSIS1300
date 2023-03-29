@@ -67,7 +67,7 @@ def nextLine(file) -> str:
     # Establish the return string
     line = ""
     # Iterate through the file until the next newline or EOF is reached
-    while(True):
+    while (True):
         # Get the next char
         char = file.read(1)
         # Check if we've reached the end of the line or file
@@ -93,7 +93,7 @@ def numberOfNumbers(file) -> int:
     # Reset and read through for the number of numbers
     file.seek(0, 0)
     numNums = 0
-    while(hasNextLine(file)):
+    while (hasNextLine(file)):
         # Check to make sure the line isn't empty
         if nextLine(file) != "":
             numNums += 1
@@ -101,7 +101,7 @@ def numberOfNumbers(file) -> int:
     file.seek(initPos, 0)
     # Return the found number
     return numNums
-    
+
 
 def extremeNum(file, mode: int) -> int:
     '''
@@ -126,7 +126,7 @@ def extremeNum(file, mode: int) -> int:
     except:
         # An error was encountered, return nothing
         return None
-    while(hasNextLine(file)):
+    while (hasNextLine(file)):
         # Check to make sure the line isn't empty
         next = nextLine(file)
         if next != "":
@@ -162,7 +162,7 @@ def numMaxMin(file) -> tuple[int, int, int]:
         min = max
     except:
         return None
-    while(hasNextLine(file)):
+    while (hasNextLine(file)):
         next = nextLine(file)
         # Check to make sure the line isn't empty
         if next != "":
