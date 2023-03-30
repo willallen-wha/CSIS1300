@@ -195,3 +195,13 @@ print("The lowest number in", fileName, "is", extremeNum(file, -1))
 fullInfo = numMaxMin(file)
 print("Gathered all at once, there are", fullInfo[0], "numbers, with a maximum "
       "value of", fullInfo[1], "and a minimum value of", fullInfo[2])
+
+
+'''
+Thoughts:
+The prevention of using lists was probably the most informative part of this
+assignment, if for no other reason than reminding me how nice working with
+lists is. Even with the nextLine helper functions, I feel as though the solution
+I came up with was not nearly as elegant or efficient as simply reading the file
+as a list of lines would have been.
+'''
